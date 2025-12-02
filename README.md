@@ -1,5 +1,9 @@
 # L2G Lensless Imaging
 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![arXiv](https://img.shields.io/badge/ArXiv-2512.00488-b31b1b.svg)](https://arxiv.org/abs/2512.00488)
+[![Project](https://img.shields.io/badge/Project-Page-0066CC)](https://y1248.github.io/pub_homepage/l2g/index.html)
+
 **Paper**:
 Large-field-of-view lensless imaging with miniaturized sensors.
 
