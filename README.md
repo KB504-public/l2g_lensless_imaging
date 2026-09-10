@@ -2,16 +2,16 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![arXiv](https://img.shields.io/badge/ArXiv-2512.00488-b31b1b.svg)](https://arxiv.org/abs/2512.00488)
-[![Project](https://img.shields.io/badge/Project-Page-0066CC)](https://y1248.github.io/pub_homepage/l2g/index.html)
+<!-- [![Project](https://img.shields.io/badge/Project-Page-0066CC)](https://y1248.github.io/pub_homepage/l2g/index.html) -->
 
 **Paper**:
-Large-field-of-view lensless imaging with miniaturized sensors.
+Lensless imaging under limited measurement support via local-to-global reconstruction
 
 **Authors**:
-Yu Ren, Xiaoling Zhang, Xu Zhan, Xiangdong Ma, Yunqi Wang, Edmund Y. Lam, and Tianjiao Zeng.
+Yu Ren, Tianjiao Zeng, Xu Zhan, Xiangdong Ma, Yunqi Wang, Xiaoling Zhang, and Jun Shi.
 
 **Abstract**:
-Lensless cameras replace bulky optics with thin modulation masks, enabling compact imaging systems. However, existing methods rely on an idealized model that assumes a globally shift-invariant point spread function (PSF) and sufficiently large sensors. In reality, the PSF varies spatially across the field of view (FOV), and finite sensor boundaries truncate modulated light—effects that intensify as sensors shrink, degrading peripheral reconstruction quality and limiting the effective FOV. We address these limitations through a local-to-global hierarchical framework grounded in a locally shift-invariant convolution model that explicitly accounts for PSF variation and sensor truncation. Patch-wise learned deconvolution first adaptively estimates local PSFs and reconstructs regions independently. A hierarchical enhancement network then progressively expands its receptive field—from small patches through intermediate blocks to the full image—integrating fine local details with global contextual information. Experiments on public datasets show that our method achieves superior reconstruction quality over a larger effective FOV with significantly reduced sensor sizes. Under extreme miniaturization—sensors reduced to 8\% of the original area—we achieve improvements of 2 dB (PSNR) and 5\% (SSIM), with particularly notable gains in structural fidelity.
+Lensless cameras enable compact imaging by replacing bulky optics with thin modulation masks. However, most existing reconstruction methods typically assume a globally shift-invariant point spread function (PSF) and complete measurement acquisition, neglecting spatial PSF variation and measurement truncation that become increasingly important under limited measurement support. To address these challenges, we propose a local-to-global reconstruction method. A model-motivated local measurement formulation is first introduced to characterize spatially varying image formation when only limited measurement support is available. Guided by this formulation, locality-constrained patch-wise deconvolution assigns independently learnable inverse filters to prescribed scene regions, while a hierarchical enhancement network progressively aggregates contextual information from local patches to the full image. Experiments on public datasets and a lensless imaging prototype demonstrate improved reconstruction fidelity over larger usable reconstruction regions under restricted measurement support. When only 8\% of the original measurement area is retained, the proposed method improves PSNR by over 2 dB and SSIM by about 6\% over the strongest baseline, demonstrating its potential for compact lensless imaging with limited sensor coverage.
 
 ## Results
 ### Global-wise Deconv v.s. Patch-wise Deconv
